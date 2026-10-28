@@ -30,5 +30,5 @@ class FlightPage:
         self.first_flight.click()
 
     def choose_light_fare(self):
+        # Step 10 is not needed as price button loads Trip summary
         self.light_fare_button.click()
-        expect(self.page).not_to_have_url(self.page.url)

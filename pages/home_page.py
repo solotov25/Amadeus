@@ -98,4 +98,4 @@ class HomePage:
 
     def search_flights(self):
         self.search_button.click()
-        # expect(self.page).not_to_have_url(self.page.url)
+        expect(self.page).not_to_have_url(self.url)
