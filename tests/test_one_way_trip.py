@@ -4,6 +4,12 @@ from pages.summary_page import SummaryTrip
 from pages.services_requests import ServiceRequest
 
 def test_round_trip_is_selected_by_default(page):
+    """
+    Preconditions:
+        - Site locale is pinned to en-US (see conftest.py).
+        - Runs in headed real Chrome, since Akamai blocks headless Chromium.
+    """
+    
     home = HomePage(page)
     flight = FlightPage(page)
     summary = SummaryTrip(page)
