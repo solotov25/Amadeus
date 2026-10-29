@@ -23,8 +23,8 @@ class ServiceRequest:
             "checkbox"
         )
         
-        self.save_exit_button = Page.get_by_role("button", name="Save and exit")
-        self.go_to_payment_button = Page.get_by_role("button", name="Go to payment")
+        self.save_exit_button = page.get_by_role("button", name="Save and exit")
+        self.go_to_payment_button = page.get_by_role("button", name="Go to payment")
 
     # Methods
     def select_no_baggage(self):

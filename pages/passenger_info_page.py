@@ -38,7 +38,7 @@ class PassengerInfoPage:
         )
 
         # Next Button
-        self.next_booking_holder_button = Page.get_by_role("button", name="Next")
+        self.next_booking_holder_button = page.get_by_role("button", name="Next")
 
         # Booking holder fields
         self.passenger_list_dropdown = page.get_by_role(
@@ -63,7 +63,7 @@ class PassengerInfoPage:
         )
 
         # Continue Button
-        self.continue_button = Page.get_by_role("button", "Continue")
+        self.continue_button = page.get_by_role("button", name="Continue")
 
 
     # METHODS
@@ -91,6 +91,9 @@ class PassengerInfoPage:
         self.page.get_by_role(
             "option", name="Colombia", exact=True
         ).click()
+
+    def click_next_button(self):
+        self.next_booking_holder_button().click()
 
     def select_passenger(self, passenger: str):
         self.passenger_list_dropdown.select_option(
